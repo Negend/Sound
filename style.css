@@ -61,7 +61,7 @@ main{
   	height:100vh;
   	width:80%;
   	display:inline-block;
-  	background-color: rgba(0, 0, 0, 0.81)
+  	background-color: rgba(0, 0, 0, 0.81);
   	z-index: -2;
   	border-top: 5px solid #530e0e;
   }
@@ -143,7 +143,7 @@ p{
 }
 .music-cover{
 	background-image: url('placeholder-prowl.jpg');
-	background-size: 100% 100%
+	background-size: 100% 100%;
 }
 
 .b {width:100;}
