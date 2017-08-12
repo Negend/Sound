@@ -27,23 +27,24 @@ main{
 	width: 100%;
 	height: 7vh;
   min-width: 5.5vh;
-  background: linear-gradient( black, black, rgba(4, 4, 4, 0.9));
-  box-shadow: 0 4vh 27px rgba(4, 4, 4, 0.9);
+  background: linear-gradient( black, black, rgba(4, 4, 4, 0.89));
+  /*box-shadow: 0 3vh 27px rgba(4, 4, 4, 0.89);*/
   z-index: 1;
 }
 
 
 /*first page serves as a static background image*/
 #backy{
-	background-image: url('whiteShirt.jpeg');
+	background-color: black
 	background-size: 100vw 100vh;
 	position:fixed;
 	height:100vh;
 	width:100vw;
 	left:0;
-	top:0;
+	top:7vh;
 	z-index: -3;
 	margin-top: 0;
+	border-top: 0;
 }
 
 .tab{
@@ -59,17 +60,19 @@ main{
 
 /*page has general page area  with standard size*/
  .page{
-  	height:100vh;
-  	width:80%;
+  	height:auto;
+  	width:100%;
   	display: inline-block;
-  	background-color: rgba(0, 0, 0, 0.89);
-  	z-index: -2;
+  	background-color: rgba(0, 0, 0, 1);
+  	z-index: -4;
   	border-top: 5px solid #530e0e;
+  	vertical-align: top;
   }
 
 #banner{
 	position: relative;
 	background: none;
+	height:100vh;
 }
 
 .logo{
@@ -92,6 +95,7 @@ main{
   left: 25%;
   position: absolute;
   padding: 1%;
+  z-index: 2;
 }
 h1{
 	font-family: cursive;
@@ -107,10 +111,10 @@ font-size: 1.2em;
 .player{
 	width:60%;
 	display: inline-block;
-	display: none;
+	/*display: none;*/
 	height: 20vh;
 	margin: auto;
-	margin-top: 20vh;
+	margin-top: 8vh;
 	background-color: grey; 
 	vertical-align: top;
 
@@ -120,20 +124,19 @@ font-size: 1.2em;
     width: 70%;
     display: inline-block;
     height: 35vh;
-    margin: auto;
+    margin: 5vh;
     margin-top: 10vh;
     border: 2vh solid #4c0707;
     border-radius: 5vh;
     background-color: rgba(0,0,0,1);
-    z-index: 0;   
+    z-index: -1;   
 }
-section{
+.section{
 	width:49%;
 	height:100%;
 	margin:auto;
 	display:inline-block;
 	vertical-align: top;
-	z-index: -2;
 }
 p{
 	color: black;
@@ -144,15 +147,17 @@ p{
 	/*width:49%;*/
 	text-align:left;
 	/*padding:1%;*/
+	/*z-index: -3;*/
 	background-color: #f7eaea;
 }
 .music-cover{
 	background-image: url('placeholder-prowl.jpg');
+	z-index: -3;
 	background-size: 100% 100%;
 }
 
 .b {
-	width:100;
+	width:100%;
 }
 span{
 	color:darkred;
