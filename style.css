@@ -6,7 +6,7 @@ generlly have elements centrally aligned*/
 body {
 	min-height: 100vh;
 	width:100vw;
-  background-color: white;
+  background-image: url('backy.jpg');
 	min-width:300px;
 	text-align: center;
 	position :relative;
@@ -19,10 +19,15 @@ body {
 /*unnecessary element just keeping width  consistent in the inheritance*/
 main{
 	width:100%;
-  background-color: darkred;
-
+  background-color: rgba(132, 125, 125, 0.91);
 }
 
+#countdown{
+	display:inline-block;
+	font-size:2em;
+	margin-top:60vh ;
+	margin-left:60vw;
+}
 /*Static nav bac*/
 #nav {
 	position:fixed;
@@ -50,8 +55,12 @@ main{
 }
 #cover-photo{
 	margin-top:30%;
-	height: 70%;
+	height: 70vh;
 	width:100%;
+	background-image: url("whiteShirt.jpeg");
+	background-size: 100% 100%;
+	z-index: 0;
+	vertical-align: bottom;
 }
 
 .tab{
@@ -66,7 +75,7 @@ main{
   }
 
 /*page has general page area  with standard size*/
- .page{
+.page{
   	height:auto;
   	width:80%;
   	display: inline-block;
@@ -74,7 +83,7 @@ main{
   	z-index: -4;
   	border-top: 5px solid #530e0e;
   	vertical-align: top;
-  }
+ }
 
 #banner{
 	position: relative;
