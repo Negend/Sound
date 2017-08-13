@@ -31,10 +31,11 @@ main{
 /*Static nav bac*/
 #nav {
 	position:fixed;
-	width: 100%;
+	display: inline-block;
+	width: 80%;
 	height: 7vh;
   min-width: 5.5vh;
-  background: linear-gradient( black, black, rgba(4, 4, 4, 0.89));
+  background: linear-gradient( black, black, rgba(0, 0, 0, 1));
   /*box-shadow: 0 3vh 27px rgba(4, 4, 4, 0.89);*/
   z-index: 1;
 }
@@ -54,7 +55,7 @@ main{
 	border-top: 0;
 }
 #cover-photo{
-	margin-top:30%;
+	margin-top:8%;
 	height: 70vh;
 	width:100%;
 	background-image: url("whiteShirt.jpeg");
@@ -92,7 +93,7 @@ main{
 }
 
 .logo{
-	margin-top:50vh;
+	margin-top:7%;
 	height:20%;
 	width:70%;
 	background-color: black;
@@ -143,12 +144,16 @@ font-size: 1.2em;
     margin: 5vh;
     margin-top: 10vh;
     border: 2vh solid #4c0707;
-    border-radius: 5vh;
+    /*border-radius: 5vh;*/
     background-color: rgba(0,0,0,1);
     z-index: -1;   
 }
+#player{
+	
+	width: 100%
+}
 .section{
-	width:49%;
+	width:49.5%;
 	height:100%;
 	margin:auto;
 	display:inline-block;
@@ -200,3 +205,55 @@ span{
 	width:70%;
 	border-radius:11%;
 }
+
+
+.list{
+	padding:3%;
+	width:50%;
+	background-color: grey;
+	display:inline-block;
+}
+.tour-dates{
+	padding:3%;
+	height:100%;
+	width:70%;
+	background-color: grey;
+	display:inline-block;
+	margin:5%;
+}
+.event{
+	background-color: black;
+	padding:1%;
+	display:inline-block;
+	width:100%;
+	border:1px solid #4c0707;
+}
+.vent{
+	height: 100%;
+	width: 100%;
+}
+.event-info{
+	display:inline-block;
+	margin:1%;
+	background: white; 
+}
+.event-name{
+	width:25%;
+}
+.event-date{
+	width:25%;
+}
+.event-description{
+	width:40%;
+}
+
+
+
+
+
+
+
+
+
+
+
