@@ -143,9 +143,9 @@ font-size: 1.2em;
     height: 35vh;
     margin: 5vh;
     margin-top: 10vh;
-    border: 2vh solid #4c0707;
+    border: 2vh solid grey;
     /*border-radius: 5vh;*/
-    background-color: rgba(0,0,0,1);
+    background-color: #4c0707;
     z-index: -1;   
 }
 #player{
