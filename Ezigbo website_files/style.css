@@ -128,33 +128,19 @@ font-size: 1.2em;
 
 .remote{
 	display: inline-block;
-	width: 250px;
-	height: 225px;
-	/*box-shadow: -1px -1px 1em grey, 1px 1px 1em grey;
-	border-radius: 50%;*/
+	width: 15%;
+	min-width: 250px;
+	min-height: 225px;
+	background-color: white;
+	box-shadow: 5% 5% 1em grey;
+	border-radius: 100%;
 	margin-top:8vh;
 	margin-right:10%;
-}
-.p-button{
-	display: inline-block;
-	height:33%;
-	width:96%;
 
 }
-.top{
-	background:linear-gradient(to bottom,grey,grey,grey,grey,#5d5b5b);
-	border-bottom: 1px solid white;
-	border-radius: 250px 250px 0 0; 
-}
 
-.middle{
-	background: black;
-}
-.bottom{
-	border-top: 1px solid white;
-	background:linear-gradient(to bottom,grey,grey,grey,grey,#5d5b5b);
-	border-radius: 0 0 250px 250px;
-}
+
+
 
 
 
