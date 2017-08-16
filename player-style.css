@@ -56,6 +56,12 @@ h2{
 	color: #341dea;
 	background: black;
 }
+.c-button:hover{
+ color:#530e0e;
+}
+.bottom:hover{
+	background:#530e0e;
+}
 .fa{
   margin: 5px 0;
 }
@@ -66,3 +72,44 @@ h2{
 	border-top-right-radius: 20px;
 }
 
+
+
+
+
+/*LINKS FOR HTML*/
+
+	/*<link rel="stylesheet" type="text/css" href="player-style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+*/
+
+
+
+
+/*<!-- remote for player -->
+			<div class='remote'>
+				<!-- controls -->
+				<div class='top p-button'>
+					<div class='c-button previous'>
+						<i class="fa fa-step-backward"></i>
+					</div>
+
+					<div class='c-button play'>
+						<i class="fa fa-pause"></i>
+						<i class="fa fa-play"></i>
+					</div>
+
+					<div class='c-button next'>
+						<i class="fa fa-step-forward"></i>
+					</div>
+
+				</div>
+							<!-- song title -->
+				<div class='middle p-button'><h2>Prowl O' Lion</h2></div>	
+						<!-- download button -->
+				<a id='download-button' href="song/drunk.mp3" download="Test Song.mp3"><div class='bottom p-button'>
+					<h3>Download</h3>
+				</div></a>
+				</div>			
+			</div>
+<!-- end of remote -->
+*/
