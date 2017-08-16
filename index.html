@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- just to make sure it responds to mobiles -->
 
 	<link rel="stylesheet" type="text/css" href="reset.css"> <!-- stop browsers from adding default nonsense margins etc -->
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 	
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 	 <script type="text/javascript" src='index.js'></script>
@@ -44,32 +45,41 @@
 
 		<!-- remote for player -->
 			<div class='remote'>
-				<div class='top p-button'></div>			
-				<div class='middle p-button'></div>			
-				<div class='bottom p-button'></div>			
+			<!-- controls -->
+				<div class='top p-button'>
+					<div class='c-button previous'>
+						<i class="fa fa-step-backward"></i>
+					</div>
+
+					<div class='c-button play'>
+						<i class="fa fa-pause"></i>
+						<i class="fa fa-play"></i>
+					</div>
+
+					<div class='c-button next'>
+						<i class="fa fa-step-forward"></i>
+					</div>
+
+				</div>
+							<!-- song title -->
+				<div class='middle p-button'><h2>Prowl O' Lion</h2></div>	
+						<!-- download button -->
+				<a id='download-button' href="song/drunk.mp3" download="Test Song.mp3"><div class='bottom p-button'>
+					<h3>Download</h3>
+				</div></a>
+				</div>			
 			</div>
 
-			<!-- player display -->
-			<div class='player'>
-			<a href="song/drunk.mp3" download="Test Song.mp3"><h1>Prowl O' Lion</h1></a>
-			<!-- standard html browser player  -->
-			<audio id='player' controls="controls" >
-				<source src="song/stand1.mp3">
-				<source src="song/drunk.mp3">
-				<source src="song/stand3.mp3">
-			</audio>
-						<!-- <script src="wimpy/wimpy.js"></script>
-													
-							<div class='b' data-wimpyplayer data-skin="wimpy/wimpy.skins/itunesesc.tsv" data-media='[{"title":"Ndidi","file":"https://negend.github.io/Sound/wimpy/John.ogg"}]'>
-								
-							</div> -->
-			</div>			
-			<div class='free'></div>
-			<div class='music-info'>
+		 <div class='music-info'>
 				<div class='lyrics section'><p><span>Chis Beybé:</span> Yo Nneji. I like that girl there, she's a <span class='emphasis'> Naughty bugger </span></br>
 				 <span>Nneji:</span> jheeze</p>
 				</div>
 				<div class='music-cover section'></div>
+					<audio id='player' controls="controls" >
+					<source src="song/stand1.mp3">
+					<source src="song/drunk.mp3">
+					<source src="song/stand3.mp3">
+				</audio>
 			</div>
 		</article>
 

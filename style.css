@@ -125,7 +125,7 @@ font-size: 1.2em;
 }
 
 
-
+/*remote*/
 .remote{
 	display: inline-block;
 	width: 250px;
@@ -133,16 +133,15 @@ font-size: 1.2em;
 	/*box-shadow: -1px -1px 1em grey, 1px 1px 1em grey;
 	border-radius: 50%;*/
 	margin-top:8vh;
-	margin-right:10%;
+	/*margin-right:10%;*/
 }
 .p-button{
 	display: inline-block;
 	height:33%;
 	width:96%;
-
 }
 .top{
-	background:linear-gradient(to bottom,grey,grey,grey,grey,#5d5b5b);
+	background:linear-gradient(to bottom,#341dea,#341dea,#341dea,#341dea,#110284);
 	border-bottom: 1px solid white;
 	border-radius: 250px 250px 0 0; 
 }
@@ -152,8 +151,46 @@ font-size: 1.2em;
 }
 .bottom{
 	border-top: 1px solid white;
-	background:linear-gradient(to bottom,grey,grey,grey,grey,#5d5b5b);
+	background:linear-gradient(to bottom,#341dea,#341dea,#341dea,#341dea,#110284);
 	border-radius: 0 0 250px 250px;
+}
+
+#download-button{
+	height: 100%;
+	width: 100%;
+}
+h3{
+	color:black;
+	margin:2em;
+	font-size:1.2em;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+h2{
+	color:white;
+	margin:5px;
+	font-size:37px;
+	font-weight: bold;
+	text-shadow: 1px 0 11px crimson;
+}
+
+.c-button{
+	width:19%;
+	height: 37%;
+	margin: 12% 5% 0 5%;
+	display: inline-block;
+	color: #341dea;
+	background: black;
+}
+.fa{
+  margin: 5px 0;
+}
+.previous{
+	border-top-left-radius:20px;
+}
+.next{ 
+	border-top-right-radius: 20px;
 }
 
 
@@ -165,14 +202,14 @@ font-size: 1.2em;
 
 
 
-
-
+/*player*/
 
 .player{
+	/*position: relative;*/
 	width:50%;
 	display: inline-block;
 	/*display: none;*/
-	height: 20vh;
+	height: 15vh;
 	margin: auto;
 	margin-top: 8vh;
 	background-color: grey; 
@@ -180,6 +217,7 @@ font-size: 1.2em;
 
 }
 .music-info{
+	position:relative;
 		text-align:right;
     width: 70%;
     display: inline-block;
@@ -189,14 +227,18 @@ font-size: 1.2em;
     border: 2vh solid grey;
     /*border-radius: 5vh;*/
     background-color: #4c0707;
-    z-index: -1;   
+    z-index: 0;   
 }
+
 #player{
-	
-	width: 100%
+	position:absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	color:red;
 }
 .section{
-	width:49.5%;
+	width:49.6%;
 	height:100%;
 	margin:auto;
 	display:inline-block;
