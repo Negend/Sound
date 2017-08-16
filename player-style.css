@@ -1,1 +1,68 @@
+/*remote*/
+.remote{
+	display: inline-block;
+	width: 250px;
+	height: 225px;
+	/*box-shadow: -1px -1px 1em grey, 1px 1px 1em grey;
+	border-radius: 50%;*/
+	margin-top:8vh;
+	/*margin-right:10%;*/
+}
+.p-button{
+	display: inline-block;
+	height:33%;
+	width:96%;
+}
+.top{
+	background:linear-gradient(to bottom,#341dea,#341dea,#341dea,#341dea,#110284);
+	border-bottom: 1px solid white;
+	border-radius: 250px 250px 0 0; 
+}
+
+.middle{
+	background: black;
+}
+.bottom{
+	border-top: 1px solid white;
+	background:linear-gradient(to bottom,#341dea,#341dea,#341dea,#341dea,#110284);
+	border-radius: 0 0 250px 250px;
+}
+
+#download-button{
+	height: 100%;
+	width: 100%;
+}
+h3{
+	color:black;
+	margin:2em;
+	font-size:1.2em;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+h2{
+	color:white;
+	margin:5px;
+	font-size:37px;
+	font-weight: bold;
+	text-shadow: 1px 0 11px crimson;
+}
+
+.c-button{
+	width:19%;
+	height: 37%;
+	margin: 12% 5% 0 5%;
+	display: inline-block;
+	color: #341dea;
+	background: black;
+}
+.fa{
+  margin: 5px 0;
+}
+.previous{
+	border-top-left-radius:20px;
+}
+.next{ 
+	border-top-right-radius: 20px;
+}
 
