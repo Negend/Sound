@@ -5,7 +5,8 @@
 console.log('luminous')
  $($('.play')[0]).click(function(e){
   //if audio play == true
-         var song = $(this).next('#player').get(0);
+         $('.middle').css('background-color':'red')
+         var song = $(this).next('audio').get(0);
        if (song.paused)
          song.play();
        else
