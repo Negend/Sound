@@ -4,9 +4,9 @@
 // previous for previous
 console.log('luminous')
  $($('.play')[0]).click(event){
- //if audio play == true
- $('#player').play()
- // else $('#audio').pause()
+  //if audio play == true
+  $('#player').play()
+  // else $('#audio').pause()
  }
  
  // find current audio track..... $('.song-title').html = current audio
