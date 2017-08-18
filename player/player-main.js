@@ -4,7 +4,7 @@
 // previous for previous
  $(function() {
   console.log('luminous')
-  $($(".play")[0]).click(function(e) {
+  $(".play").click(function(e) {
   //if audio play == true
          $(".middle").css("background-color:red")
          var song = $(this).next('audio').get(0);
