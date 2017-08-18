@@ -2,6 +2,7 @@
 // toggle play pause on click
 // next for next track
 // previous for previous
+console.log('luminous')
  $($('.play')[0]).click(event){
  //if audio play == true
  $('#player').play()
