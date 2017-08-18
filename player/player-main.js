@@ -2,16 +2,18 @@
 // toggle play pause on click
 // next for next track
 // previous for previous
-console.log('luminous')
- $($('.play')[0]).click(function(e){
+ $(function() {
+  console.log('luminous')
+  $($(".play")[0]).click(function(e) {
   //if audio play == true
-         $('.middle').css('background-color:red')
+         $(".middle").css("background-color:red")
          var song = $(this).next('audio').get(0);
        if (song.paused)
          song.play();
        else
          song.pause();
   // else $('#audio').pause()
+ })
  })
  
  // find current audio track..... $('.song-title').html = current audio
