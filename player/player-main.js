@@ -3,9 +3,13 @@
 // next for next track
 // previous for previous
 console.log('luminous')
- $($('.play')[0]).click(function(event){
+ $($('.play')[0]).click(function(e){
   //if audio play == true
-  $('#player').play()
+         var song = $(this).next('#player').get(0);
+       if (song.paused)
+         song.play();
+       else
+         song.pause();
   // else $('#audio').pause()
  })
  
