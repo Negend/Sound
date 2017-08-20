@@ -6,10 +6,25 @@ console.log('Welcome devs, to my site. Still fixing it up so go easy. DONT FORGE
 $(function() {
 var playing = false
 
-
+var title
 var t = 0
 var track = new Audio('song/stand1.mp3')
-var tracks = ['song/stand1.mp3','song/drunk.mp3','song/stand3.mp3']
+var tracks = [
+	{
+		song : 'song/stand1.mp3',
+		title : 'stand'
+	},
+	
+	{
+		song:'song/drunk.mp3',
+		title:'drunk'
+	},
+	
+	{	
+		song:'song/stand3.mp3',
+		title:'standby mama'
+	}
+]
 pausePlay()
 nextSong()
 prevSong()
@@ -47,7 +62,7 @@ function nextSong(){
 			t = 0
 		}
 	// insert next track
-		track.src = tracks[t]
+		trackUpdate()
 
 	// if audio was already playing, start playing immediately
 		if (cont == true){
@@ -73,8 +88,8 @@ function prevSong(){
 		if (t < 0){
 			t = 0
 		}
-	// insert next track
-		track.src = tracks[t]
+	// update track and title 
+		trackUpdate()
 
 	// if audio was already playing, start playing immediately
 		if (cont == true){
@@ -97,7 +112,14 @@ function pauseTrack(){
 	playing = false
 }
 
-
+function trackUpdate(){
+	// insert new disc
+	track.src = tracks[t].song
+	title = tracks[t].title
+	// song title change
+	console.log(title)
+	$("#track-name").html(title)
+}
 
 
 
