@@ -154,7 +154,8 @@ font-size: 1.2em;
     border: 2vh solid grey;
     /*border-radius: 5vh;*/
     background-color: #4c0707;
-    z-index: 0;   
+    z-index: 0;
+
 }
 
 #player{
@@ -165,25 +166,31 @@ font-size: 1.2em;
 	color:red;
 }
 .section{
-	width:49.6%;
+	width:100%;
 	height:100%;
 	margin:auto;
 	display:inline-block;
 	vertical-align: top;
+	position: relative;
 }
 p{
-	color: black;
-	font-size: 118%;
+	color: #4c0707;
+	font-size: 148%;
 	line-height: 2;
+	text-shadow: 3px 3px 22px blue;
+	font-weight: bold;
 }
 .lyrics{
 	/*width:49%;*/
 	text-align:left;
 	/*padding:1%;*/
-	/*z-index: -3;*/
-	background-color: #f7eaea;
+	z-index: 3;
+	background-color: rgba(0,21,76,0.5);
 }
 .music-cover{
+	position: absolute;
+	top:0;
+	left:0;
 	background-image: url('placeholder-prowl.jpg');
 	z-index: -3;
 	background-size: 100% 100%;
