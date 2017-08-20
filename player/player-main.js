@@ -29,6 +29,12 @@ pausePlay()
 nextSong()
 prevSong()
 
+for (var i = 0; i < tracks.length; i++){
+	console.log((i+1)+'. '+tracks[i].title)
+	var list = (i+1)+'. '+tracks[i].title
+	$('#playlist').append("<h6 class='track'>"+list+"</h6>")
+
+}
 
 
 
@@ -62,7 +68,7 @@ function nextSong(){
 			t = 0
 		}
 	// insert next track
-		trackUpdate()
+		trackUpdate(t)
 
 	// if audio was already playing, start playing immediately
 		if (cont == true){
@@ -89,7 +95,7 @@ function prevSong(){
 			t = 0
 		}
 	// update track and title 
-		trackUpdate()
+		trackUpdate(t)
 
 	// if audio was already playing, start playing immediately
 		if (cont == true){
@@ -112,10 +118,10 @@ function pauseTrack(){
 	playing = false
 }
 
-function trackUpdate(){
+function trackUpdate(number){
 	// insert new disc
-	track.src = tracks[t].song
-	title = tracks[t].title
+	track.src = tracks[number].song
+	title = tracks[number].title
 	// song title change
 	console.log(title)
 	$("#track-name").html(title)

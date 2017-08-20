@@ -72,8 +72,15 @@ h2{
 	border-top-right-radius: 20px;
 }
 
+.track{
+	text-align: left;
+}
 
-
+#playlist{
+	width:50%;
+	margin:auto;
+	line-height: 1.5;
+}
 
 
 /*LINKS FOR HTML*/
