@@ -12,31 +12,50 @@ var track = new Audio('song/stand1.mp3')
 var tracks = [
 	{
 		song : 'song/stand1.mp3',
+		cover : '',
 		title : 'stand'
 	},
 	
 	{
 		song:'song/drunk.mp3',
+		cover : '',
 		title:'drunk'
 	},
 	
 	{	
 		song:'song/stand3.mp3',
+		cover : '',
 		title:'standby mama'
 	}
 ]
 pausePlay()
 nextSong()
 prevSong()
+listTracks()
+chooseTrack()
 
-for (var i = 0; i < tracks.length; i++){
+function listTracks(){
+	for (var i = 0; i < tracks.length; i++){
 	console.log((i+1)+'. '+tracks[i].title)
 	var list = (i+1)+'. '+tracks[i].title
-	$('#playlist').append("<h6 class='track'>"+list+"</h6>")
-
+	$('#playlist').append("<h6 class='track track"+i+"'>"+list+"</h6>")
+	}
 }
 
 
+
+function chooseTrack(){
+	$('.track').each(function(i){
+		$('.track'+i).click(function(e){
+			console.log('list')
+			console.log(i)
+			trackUpdate(i)
+			playTrack()
+		})
+	})
+
+
+}
 
 
 
@@ -81,7 +100,7 @@ function prevSong(){
 	var cont
 	
 	$(".previous").click(function(e){
-		console.log(track.currentTime)
+		
 	// stop whatever is playing 
 		if (playing == true){		
 			pauseTrack()
@@ -123,7 +142,7 @@ function trackUpdate(number){
 	track.src = tracks[number].song
 	title = tracks[number].title
 	// song title change
-	console.log(title)
+
 	$("#track-name").html(title)
 }
 
