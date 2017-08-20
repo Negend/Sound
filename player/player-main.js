@@ -1,7 +1,3 @@
-// find audio button by id  make its click trigger play/pause
-// toggle play pause on click
-// next for next track
-// previous for previous
 console.log('Welcome devs, to my site. Still fixing it up so go easy. DONT FORGET TO DOWLOAD MUSIC TOO :-) ')
 $(function() {
 var playing = false
@@ -28,11 +24,22 @@ var tracks = [
 		title:'standby mama'
 	}
 ]
+
+listTracks()
 pausePlay()
 nextSong()
 prevSong()
-listTracks()
 chooseTrack()
+track.onplay = function(e){
+ colorTracker()
+}
+
+
+
+
+
+
+
 
 function listTracks(){
 	for (var i = 0; i < tracks.length; i++){
@@ -41,8 +48,6 @@ function listTracks(){
 	$('#playlist').append("<h6 class='track track"+i+"'>"+list+"</h6>")
 	}
 }
-
-
 
 function chooseTrack(){
 	$('.track').each(function(i){
@@ -53,16 +58,13 @@ function chooseTrack(){
 			playTrack()
 		})
 	})
-
-
 }
 
 
 
-function pausePlay(){
-	
+function pausePlay(){	
 	$(".play").click(function(e) { 
-	  if (playing == false) {
+	  if (playing === false) {
 		  playTrack()
 		} 
 		else{
@@ -71,59 +73,66 @@ function pausePlay(){
 	})
 }
 
-function nextSong(){
-	var cont
+function nextSong(){	
 	$(".next").click(function(e){
-
+		var con = false
 	// stop whatever is playing 
-		if (playing == true){		
+		if (playing === true){		
 			pauseTrack()
-			cont = true
-
+			con = true
 		}
 	// on to the next source on track list
 		t = t + 1
-		if (t == tracks.length){
+		if (t === tracks.length){
 			t = 0
 		}
 	// insert next track
 		trackUpdate(t)
 
 	// if audio was already playing, start playing immediately
-		if (cont == true){
+		if (con === true){
 			playTrack()
 		}
 	})
 }
 
 function prevSong(){
-	var cont
-	
-	$(".previous").click(function(e){
-		
-	// stop whatever is playing 
-		if (playing == true){		
+	$(".previous").click(function(e){	
+		var cont = false
+// stop whatever is playing 
+		if (playing === true){		
 			pauseTrack()
 			cont = true
-
 		}
-	// on to the previous source on track list or reset current
+	// on to the previous source on track list or reset current	
 		if (track.currentTime < 5)
 		t = t - 1
 		if (t < 0){
 			t = 0
-		}
+		}		
 	// update track and title 
 		trackUpdate(t)
-
 	// if audio was already playing, start playing immediately
-		if (cont == true){
+		if (cont === true){
 			playTrack()
 		}
 	})
 }
 
 
+
+
+// function countDown(T){
+// 	var timer= new Array(T)
+// 	$($('.stats')[2]).html(timer.length)
+// 	timerId = setInterval(function(){	
+// 		timer.pop()
+// 		$($('.stats')[2]).html(timer.length)
+// 		if (timer.length===0){
+// 			quit()
+// 		}
+// 	},1000)
+// }
 
 
 
@@ -138,13 +147,22 @@ function pauseTrack(){
 }
 
 function trackUpdate(number){
+	t = number
 	// insert new disc
 	track.src = tracks[number].song
 	title = tracks[number].title
 	// song title change
-
 	$("#track-name").html(title)
 }
+
+function colorTracker(){
+	$('.track').each(function(index){
+		$(this).removeClass('selected')
+	})
+	$('.track'+ t).addClass('selected')
+
+}
+
 
 
 
