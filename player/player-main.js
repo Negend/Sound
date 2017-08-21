@@ -9,19 +9,19 @@ var tracks = [
 	{
 		song : 'song/stand1.mp3',
 		cover : '',
-		title : 'stand'
+		title : 'Stand by'
 	},
 	
 	{
 		song:'song/drunk.mp3',
 		cover : '',
-		title:'drunk'
+		title:'Drunk Loving'
 	},
 	
 	{	
 		song:'song/stand3.mp3',
 		cover : '',
-		title:'standby mama'
+		title:'Standby Ma'
 	}
 ]
 
