@@ -4,8 +4,8 @@ var playing = false
 
 var title
 var t = 0
-//var track = new Audio('song/stand1.mp3')
-var track = $('#player')
+var track = new Audio('song/stand1.mp3')
+
 var tracks = [
 	{
 		song : 'song/stand1.mp3',
