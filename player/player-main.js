@@ -33,7 +33,9 @@ chooseTrack()
 track.onplay = function(e){
  colorTracker()
 }
-
+	
+	trackUpdate(t)
+	$($('.track')[0]).addClass('selected')
 
 
 
@@ -43,10 +45,11 @@ track.onplay = function(e){
 
 function listTracks(){
 	for (var i = 0; i < tracks.length; i++){
-	console.log((i+1)+'. '+tracks[i].title)
-	var list = (i+1)+'. '+tracks[i].title
-	$('#playlist').append("<h6 class='track track"+i+"'>"+list+"</h6>")
+		console.log((i+1)+'. '+tracks[i].title)
+		var list = (i+1)+'. '+tracks[i].title
+		$('#playlist').append("<h6 class='track track"+i+"'>"+list+"</h6>")
 	}
+
 }
 
 function chooseTrack(){
@@ -93,6 +96,7 @@ function nextSong(){
 		if (con === true){
 			playTrack()
 		}
+		colorTracker()
 	})
 }
 
@@ -116,6 +120,7 @@ function prevSong(){
 		if (cont === true){
 			playTrack()
 		}
+		colorTracker()
 	})
 }
 
