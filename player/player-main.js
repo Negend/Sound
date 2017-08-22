@@ -11,7 +11,7 @@ var tracks = [
 	{
 		song : 'song/stand1.mp3',
 		cover : '',
-		title : 'Stand by'
+		title : 'Welcome'
 	},
 	
 	{
@@ -21,9 +21,15 @@ var tracks = [
 	},
 	
 	{	
+		song:'song/stand2.mp3',
+		cover : '',
+		title:'Gassed'
+	},
+
+	{	
 		song:'song/stand3.mp3',
 		cover : '',
-		title:'Standby Ma'
+		title:"Prowl O' Lion"
 	}
 ]
 
