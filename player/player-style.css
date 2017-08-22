@@ -21,6 +21,7 @@
 
 .middle{
 	background: black;
+	position:relative;
 }
 .bottom{
 	border-top: 1px solid white;
@@ -85,10 +86,15 @@ h2{
 	background-color: #530e0e;
 }
 .duration{
-	height:10px;
+	height:15px;
 	width:100%;
 	text-align: left;
+	bottom:0;
+  position: absolute;
+ 
+  left: 0;
 }
+
 .seconds{
 	width:1%;
 	height:100%;

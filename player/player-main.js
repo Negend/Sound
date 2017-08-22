@@ -41,7 +41,6 @@ duration()
 
 function listTracks(){
 	for (var i = 0; i < tracks.length; i++){
-		console.log((i+1)+'. '+tracks[i].title)
 		var list = (i+1)+'. '+tracks[i].title
 		$('#playlist').append("<h6 class='track track"+i+"'>"+list+"</h6>")
 	}
@@ -50,7 +49,6 @@ function listTracks(){
 function chooseTrack(){
 	$('.track').each(function(i){
 		$('.track'+i).click(function(e){
-			console.log(i)
 			trackUpdate(i)
 			playTrack()
 		})
@@ -153,6 +151,7 @@ function trackUpdate(number){
 	t = number
 	// insert new disc
 	track.src = tracks[number].song
+	$('#download-button').attr('Download', tracks[number].song)
 	var title = tracks[number].title
 	// song title change
 	$("#track-name").html(title)
@@ -173,7 +172,6 @@ function oncePlaying(){
 
 function duration(){
 	track.ondurationchange = function(){
-		console.log(track.duration+ 'SECONDS')
 		maxT = track.duration
 		progressChange()
 	}
@@ -187,7 +185,6 @@ function createTimer(){
 	$('.seconds').each(function(i){
 		$(this).click(function(){
 			maxT = track.duration
-			console.log(i+'  '+track.currentTime)
 			track.currentTime = i * 0.01 * maxT
 		})
 	})
@@ -198,17 +195,15 @@ function progressChange(){
 	// colormoving
 
 	track.ontimeupdate = function(){
-
+		var step = track.currentTime/maxT/0.01
+		step = Math.floor(step)		
 		var n
+		var u = 0.1
+		u = step
 		$('.seconds').each(function(index){
 			$(this).removeClass('progress')
-			step = track.currentTime/maxT/0.01
-
-			step = Math.floor(step)
-			console.log(step+'step')			
 			if(index == step ){
 				n = index
-					console.log(step+'step winner')
 			}
 			for(i=0;i<n;i++){
 				$($('.seconds')[i]).addClass('progress')
