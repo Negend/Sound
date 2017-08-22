@@ -1,13 +1,11 @@
 console.log('Welcome devs, to my site. Still fixing it up so go easy. DONT FORGET TO DOWLOAD MUSIC TOO :-) ')
 $(function() {
+
 var playing = false
-
-var title
+// t for track number
 var t = 0
-
 // var track = new Audio('song/stand1.mp3')
 var track = document.getElementById('player')
-
 
 var tracks = [
 	{
@@ -155,7 +153,7 @@ function trackUpdate(number){
 	t = number
 	// insert new disc
 	track.src = tracks[number].song
-	title = tracks[number].title
+	var title = tracks[number].title
 	// song title change
 	$("#track-name").html(title)
 }
