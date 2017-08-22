@@ -25,6 +25,7 @@ main{
 #countdown{
 	display:inline-block;
 	font-size:2em;
+	margin: 0;
 	margin-top:60vh ;
 	margin-left:60vw;
 	color:white;
