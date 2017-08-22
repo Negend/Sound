@@ -9,25 +9,25 @@ var track = document.getElementById('player')
 
 var tracks = [
 	{
-		song : 'song/stand1.mp3',
+		song : 'song/yo.ogg',
 		cover : '',
 		title : 'Welcome'
 	},
 	
 	{
-		song:'song/drunk.mp3',
+		song:'song/drunk.mpeg',
 		cover : '',
 		title:'Drunk Loving'
 	},
 	
 	{	
-		song:'song/stand2.mp3',
+		song:'song/gas.ogg',
 		cover : '',
 		title:'Gassed'
 	},
 
 	{	
-		song:'song/stand3.mp3',
+		song:'song/prowl.mpeg',
 		cover : '',
 		title:"Prowl O' Lion"
 	}
