@@ -4,7 +4,9 @@ var playing = false
 
 var title
 var t = 0
-var track = new Audio('song/stand1.mp3')
+// var track = new Audio('song/stand1.mp3')
+var track = document.getElementById('player')
+
 var tracks = [
 	{
 		song : 'song/stand1.mp3',
@@ -30,17 +32,11 @@ pausePlay()
 nextSong()
 prevSong()
 chooseTrack()
-track.onplay = function(e){
- colorTracker()
-}
-	
-	trackUpdate(t)
-	$($('.track')[0]).addClass('selected')
-
-
-
-
-
+oncePlaying()
+trackUpdate(t)
+$($('.track')[0]).addClass('selected')
+createTimer()
+duration()
 
 
 function listTracks(){
@@ -49,13 +45,11 @@ function listTracks(){
 		var list = (i+1)+'. '+tracks[i].title
 		$('#playlist').append("<h6 class='track track"+i+"'>"+list+"</h6>")
 	}
-
 }
 
 function chooseTrack(){
 	$('.track').each(function(i){
 		$('.track'+i).click(function(e){
-			console.log('list')
 			console.log(i)
 			trackUpdate(i)
 			playTrack()
@@ -75,6 +69,8 @@ function pausePlay(){
 		}
 	})
 }
+
+
 
 function nextSong(){	
 	$(".next").click(function(e){
@@ -99,6 +95,8 @@ function nextSong(){
 		colorTracker()
 	})
 }
+
+
 
 function prevSong(){
 	$(".previous").click(function(e){	
@@ -165,13 +163,39 @@ function colorTracker(){
 		$(this).removeClass('selected')
 	})
 	$('.track'+ t).addClass('selected')
+}
 
+function oncePlaying(){
+	track.onplay = function(e){
+	 	colorTracker()		
+	}
+}
+
+function duration(){
+	track.ondurationchange = function(){
+		console.log(track.duration+ 'SECONDS')
+		maxT = track.duration
+	}
+}
+// create function that creates clickable event listeners for each tiny div relating current time an maxtime
+
+function createTimer(){
+	for (var i = 0; i < 100; i++){
+		$('.duration').append("<li class='seconds'></li>")
+	}
+	$('.seconds').each(function(i){
+		$(this).click(function(){
+			maxT = track.duration
+			console.log(i+'  '+track.currentTime)
+			track.currentTime = i * 0.01 * maxT
+		})
+	})
 }
 
 
-
-
-
+function progressChange(n){
+	// colormoving
+}
 })
 	 
  // find current audio track..... $('.song-title').html = current audio

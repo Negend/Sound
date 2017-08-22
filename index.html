@@ -46,8 +46,8 @@
 
 
 
-
-<!-- remote for player -->
+<!-- player -->
+		<!-- remote for player -->
 			<div class='remote'>
 				<!-- controls -->
 				<div class='top p-button'>
@@ -65,20 +65,26 @@
 					</div>
 
 				</div>
-							<!-- song title -->
-				<div class='middle p-button'><h2 id ='track-name'>Prowl O' Lion</h2></div>	
-						<!-- download button -->
-				<a id='download-button' href="song/drunk.mp3" download="Test Song.mp3"><div class='bottom p-button'>
-					<h3>Download</h3>
-				</div></a>
-				</div>			
+				<!-- song title -->
+				<div class='middle p-button'>
+					<h2 id ='track-name'>Prowl O' Lion</h2>
+					<ul class='duration'></ul>
+				</div>	
+				<!-- download button -->
+				<a id='download-button' href="song/drunk.mp3" download="Test Song.mp3">
+					<div class='bottom p-button'>
+						<h3>Download</h3>
+					</div>
+				</a>
 			</div>
-<!-- end of remote -->
+					<audio id='player'></audio>							
+			
+		<!-- end of remote -->
 			<div id ='playlist'>
 				<h4>Playlist</h4>
 				
 			</div>
-
+<!-- End of player -->
 
 
 
@@ -89,11 +95,6 @@
 				 <span>Nneji:</span> jheeze</p>
 				</div>
 				<div class='music-cover section'></div>
-<!-- 					<audio id='player' controls="controls" >
-						<source src="song/stand1.mp3">
-						<source src="song/drunk.mp3">
-						<source src="song/stand3.mp3">
-					</audio> -->
 			</div>
 		</article>
 

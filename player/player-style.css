@@ -84,7 +84,17 @@ h2{
 .selected{
 	background-color: #530e0e;
 }
-
+.duration{
+	height:10px;
+	width:100%;
+	text-align: left;
+}
+.seconds{
+	width:1%;
+	height:100%;
+	background: rgba(83, 14, 14, 0.25);
+	display: inline-block;
+}
 
 /*LINKS FOR HTML*/
 
