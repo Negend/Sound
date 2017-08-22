@@ -24,7 +24,7 @@ main{
 
 #countdown{
 	display:inline-block;
-	font-size:2em;
+	font-size:4vh;
 	margin: 0;
 	margin-top:60vh ;
 	margin-left:60vw;
@@ -179,7 +179,7 @@ p{
 	color: black;
 	font-size: 3vw;
 	line-height: 2;
-	text-shadow: 3px 3px 22px blue;
+	text-shadow: 3px 3px 22px white;
 	font-weight: bold;
 }
 .lyrics{

@@ -10,25 +10,25 @@ var track = document.getElementById('player')
 var tracks = [
 	{
 		song : 'song/yo.mp3',
-		cover : '',
+		cover : 'song/yo.webp',
 		title : 'Welcome'
 	},
 	
 	{
 		song:'song/drunk.mpeg',
-		cover : '',
+		cover : 'song/drunk.jpg',
 		title:'Drunk Loving'
 	},
 	
 	{	
 		song:'song/gas.mp3',
-		cover : '',
+		cover : 'song/gas.jpg',
 		title:'Gassed'
 	},
 
 	{	
 		song:'song/prowl.mpeg',
-		cover : '',
+		cover : 'song/prowl.jpg',
 		title:"Prowl O' Lion"
 	}
 ]
@@ -160,8 +160,11 @@ function trackUpdate(number){
 	track.src = tracks[number].song
 	$('#download-button').attr('Download', tracks[number].song)
 	var title = tracks[number].title
+	var cover = tracks[number].cover
 	// song title change
 	$("#track-name").html(title)
+	$(".music-cover").css('background-image',"url("+cover+")")
+	// $(".music-cover").css('background-image',"url("+cover+")")
 }
 
 function colorTracker(){
