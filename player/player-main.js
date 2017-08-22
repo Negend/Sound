@@ -175,6 +175,7 @@ function duration(){
 	track.ondurationchange = function(){
 		console.log(track.duration+ 'SECONDS')
 		maxT = track.duration
+		progressChange()
 	}
 }
 // create function that creates clickable event listeners for each tiny div relating current time an maxtime
@@ -193,8 +194,27 @@ function createTimer(){
 }
 
 
-function progressChange(n){
+function progressChange(){
 	// colormoving
+
+	track.ontimeupdate = function(){
+
+		var n
+		$('.seconds').each(function(index){
+			$(this).removeClass('progress')
+			step = track.currentTime/maxT/0.01
+
+			step = Math.floor(step)
+			console.log(step+'step')			
+			if(index == step ){
+				n = index
+					console.log(step+'step winner')
+			}
+			for(i=0;i<n;i++){
+				$($('.seconds')[i]).addClass('progress')
+			}
+		})
+	}
 }
 })
 	 
