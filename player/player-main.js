@@ -43,6 +43,7 @@ trackUpdate(t)
 $($('.track')[0]).addClass('selected')
 createTimer()
 duration()
+autoPlay()
 
 
 function listTracks(){
@@ -199,7 +200,6 @@ function createTimer(){
 
 function progressChange(){
 	// colormoving
-
 	track.ontimeupdate = function(){
 		var step = track.currentTime/maxT/0.01
 		step = Math.floor(step)		
@@ -217,10 +217,19 @@ function progressChange(){
 		})
 	}
 }
+
+function autoPlay(){
+	track.onended = function(){
+		if (t+1 === tracks.length){
+			t=0
+		}else{
+			t=t+1
+		}
+		pauseTrack()
+		trackUpdate(t)
+		playTrack()
+	}
+}
+
+
 })
-	 
- // find current audio track..... $('.song-title').html = current audio
- 
- 
- // find elements by class different song sources or params ;
- // for each song $('#songlist').appendchild = "<h5 class='track track1'>" + this + "</h5>"
