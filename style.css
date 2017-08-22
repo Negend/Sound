@@ -147,9 +147,9 @@ font-size: 1.2em;
 .music-info{
 	position:relative;
 		text-align:right;
-    width: 70%;
+    width: 60vw;
     display: inline-block;
-    height: 35vh;
+    height: 40vw;
     margin: 5vh;
     margin-top: 10vh;
     border: 2vh solid grey;
