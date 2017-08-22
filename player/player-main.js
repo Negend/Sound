@@ -9,7 +9,7 @@ var track = document.getElementById('player')
 
 var tracks = [
 	{
-		song : 'song/yo.ogg',
+		song : 'song/yo.mp3',
 		cover : '',
 		title : 'Welcome'
 	},
@@ -21,7 +21,7 @@ var tracks = [
 	},
 	
 	{	
-		song:'song/gas.ogg',
+		song:'song/gas.mp3',
 		cover : '',
 		title:'Gassed'
 	},
