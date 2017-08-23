@@ -158,8 +158,9 @@ function trackUpdate(number){
 	t = number
 	// insert new disc
 	track.src = tracks[number].song
-	$('#download-button').attr('Download', tracks[number].song)
-	var title = tracks[number].title
+	$('#download-button').attr('download', tracks[number].title)
+	$('#download-button').attr('href', tracks[number].song)
+var title = tracks[number].title
 	var cover = tracks[number].cover
 	// song title change
 	$("#track-name").html(title)
