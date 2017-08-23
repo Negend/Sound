@@ -153,8 +153,8 @@ font-size: 1.2em;
     height: 40vw;
     margin: 5vh;
     margin-top: 10vh;
-    border: 2vh solid grey;
-    /*border-radius: 5vh;*/
+    border: 2vh solid #341dea;
+    border-radius: 5px;
     background-color: #4c0707;
     z-index: 0;
 
