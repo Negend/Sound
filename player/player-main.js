@@ -44,7 +44,7 @@ $($('.track')[0]).addClass('selected')
 createTimer()
 duration()
 autoPlay()
-
+keys()
 
 function listTracks(){
 	for (var i = 0; i < tracks.length; i++){
@@ -233,6 +233,17 @@ function autoPlay(){
 		trackUpdate(t)
 		playTrack()
 	}
+}
+function keys(){
+	$(document).keydown(function(e){
+	  if (e.keyCode == 32) { 
+	     $('.play').click()     
+	  }else if (e.keyCode == 39){
+	  	$('.next').click()
+	  }else if (e.keyCode == 37){
+	  	$('.previous').click()
+	  }
+	})
 }
 
 
