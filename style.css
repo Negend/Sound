@@ -235,38 +235,33 @@ span{
 	display:inline-block;
 }
 .tour-dates{
-	padding:3%;
-	height:100%;
-	width:70%;
-	background-color: grey;
 	display:inline-block;
 	margin:5%;
+		text-decoration: none;
 }
 .event{
-	background-color: black;
-	padding:1%;
 	display:inline-block;
 	width:100%;
-	border:1px solid #4c0707;
+		margin:3% 0;
+	/*border:1px solid ;*/
+		text-decoration: none;
 }
 .vent{
-	height: 100%;
+	font-family: Arial;
+	text-shadow: 3px 5px 7px #4c0707;
+	color: white;
+	height:100%;
 	width: 100%;
+	font-size: 3vw;
+	font-weight: bold;
+	text-decoration: none;
 }
-.event-info{
-	display:inline-block;
-	margin:1%;
-	background: white; 
+.available{
+	color:#4c0707;
+	text-shadow: 0 0;
 }
-.event-name{
-	width:25%;
-}
-.event-date{
-	width:25%;
-}
-.event-description{
-	width:40%;
-}
+
+
 
 
 
