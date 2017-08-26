@@ -26,8 +26,8 @@ main{
 	display:inline-block;
 	font-size:4vh;
 	margin: 0;
-	margin-top:60vh ;
-	margin-left:60vw;
+	margin-top:43vh ;
+	margin-left:43vw;
 	color:white;
 }
 /*Static nav bac*/
@@ -57,8 +57,8 @@ main{
 	border-top: 0;
 }
 #cover-photo{
-	margin-top:8%;
-	height: 70vh;
+	margin-top:3%;
+	height: 50vh;
 	width:100%;
 	background-image: url("whiteShirt.jpeg");
 	background-size: 100% 100%;
@@ -216,15 +216,16 @@ span{
 	/*padding:10vw;*/
 }
 #tees{
-	height :24vh;
+	height :35vw;
 	display:inline-block;
-	margin:15%;
-	margin-top: 3%;
+
+	margin: 3% 0;
 	background-color: white;
 	background-image: url('Tees.png');
 	background-size: 100% 100%;
-	width:70%;
-	border-radius:11%;
+	width:65vw;
+	border-radius:5%;
+	border:0.3vh solid yellow;
 }
 
 
