@@ -26,9 +26,10 @@ main{
 	display:inline-block;
 	font-size:4vh;
 	margin: 0;
-	margin-top:43vh ;
-	margin-left:43vw;
+	position: absolute;
 	color:white;
+	right:2vh;
+	bottom:1vh;
 }
 /*Static nav bac*/
 #nav {
@@ -58,12 +59,13 @@ main{
 }
 #cover-photo{
 	margin-top:3%;
-	height: 50vw;
+	height: 45vw;
 	width:100%;
 	background-image: url("whiteShirt.jpeg");
 	background-size: 100% 100%;
 	z-index: 0;
 	vertical-align: bottom;
+	position:relative;
 }
 
 .tab{
@@ -95,7 +97,7 @@ main{
 }
 
 .logo{
-	margin-top:7%;
+	margin-top:7vh;
 	height:20%;
 	width:70%;
 	background-color: black;
@@ -272,6 +274,27 @@ span{
 	width:2vw;*/
 	z-index: 4;
 	background-color: black;
+
+}
+
+@media screen and (max-width:420.01px){
+
+	.page{
+		width: 100%
+	}
+	#nav{
+		width: 100%
+	}
+
+	.music-info{
+		width:75vw;
+		height:40vw;
+		margin:5vw;
+	}
+	h1{
+		font-size: 2.3em;
+	}
+
 
 }
 
