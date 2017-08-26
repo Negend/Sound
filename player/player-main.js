@@ -245,6 +245,11 @@ function keys(){
 	  }
 	})
 }
-
+function lyrics(){
+	$('#subtitles').click(function(){
+		$('.lyrics').toggleClass('subtitles')
+	})
+}
+lyrics()
 
 })

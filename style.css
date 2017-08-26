@@ -58,7 +58,7 @@ main{
 }
 #cover-photo{
 	margin-top:3%;
-	height: 50vh;
+	height: 50vw;
 	width:100%;
 	background-image: url("whiteShirt.jpeg");
 	background-size: 100% 100%;
@@ -261,7 +261,19 @@ span{
 	color:#4c0707;
 	text-shadow: 0 0;
 }
+.subtitles{
+	display: none;
+}
+#subtitles{
+	position: absolute;
+	bottom: 4px;
+	right:4px;
+/*	height:2vw;
+	width:2vw;*/
+	z-index: 4;
+	background-color: black;
 
+}
 
 
 
